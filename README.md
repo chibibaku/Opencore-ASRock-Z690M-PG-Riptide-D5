@@ -30,6 +30,7 @@ The list has copy and edited form  [Hackintosh checklist](https://chriswayg.gitb
 - **Not Working:** bold.
 - **Not Tested:** leave as-is.
 - **Not applicable:** Strikethrough or delete.
+See what deleted from [here](https://github.com/chibibaku/Opencore-ASRock-Z690M-PG-Riptide-D5/blob/main/README.md?plain=1).
 
 <details><summary>Expand</summary><div>
 
@@ -100,12 +101,10 @@ The list has copy and edited form  [Hackintosh checklist](https://chriswayg.gitb
 
 #### Sensors
 
-Check with HWMonitorSMC2
-
-* [ ] **CPU**
-* [ ] **GPU**
-* [ ] **SSD**, **NVMe**, HD
-* [ ] **Fans**
+* [x] CPU
+* [x] GPU
+* [ ] SSD, NVMe, HD
+* [x] Fans
 
 #### Keyboard
 
@@ -131,7 +130,7 @@ Check with HWMonitorSMC2
 
 * [x] Gigabit LAN
 * [x] 2.5GBase-T (especially on Comet Lake and above boards)
-* [ ] ~~10GBase-T (Aquantia with updated firmware)~~
+<!-- * [ ] 10GBase-T (Aquantia with updated firmware) -->
 
 <!-- #### Wifi & Bluetooth
 
@@ -163,10 +162,20 @@ Check with HWMonitorSMC2
 
 # Update log
 ## Last update
-- First boot with macOS 14.1.2 .
-- Include AppleALC to fix ALC897.
-- Include LucyRTL8125Ethernet to enable 2.5GBit Ethernet by Killer E3100G.
-- Include RestrictEvents to
-  - Custom CPU name in System Information.
-  - Prevent PCI configuration warnings in System Settings on MacPro7,1 platforms.
-  - Enable OTA updates.
+- Enable SMCProcessor.kext
+- Enable SMCSuperIO.kext
+- CPU monitoring is now available.
+- Change update log style.
+
+<details><summary>Older updates</summary><div>
+
+## 9f82e947 - Initial commit. OpenCore 0.9.7 DEBUG
+  - First boot with macOS 14.1.2 .
+  - Include AppleALC to fix ALC897.
+  - Include LucyRTL8125Ethernet to enable 2.5GBit Ethernet by Killer E3100G.
+  - Include RestrictEvents to
+    - Custom CPU name in System Information.
+    - Prevent PCI configuration warnings in System Settings on MacPro7,1 platforms.
+    - Enable OTA updates.
+
+</div></details>
