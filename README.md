@@ -152,7 +152,6 @@ See what deleted from [here](https://github.com/chibibaku/Opencore-ASRock-Z690M-
 
 # Issues
 - USB Mapping (Fix later)
-- SMC Plugins
 - Fix dGPU has miss-recognized as Radeon Pro 560
 
 # Setup
@@ -162,12 +161,15 @@ See what deleted from [here](https://github.com/chibibaku/Opencore-ASRock-Z690M-
 
 # Update log
 ## Last update
-- Enable SMCProcessor.kext
-- Enable SMCSuperIO.kext
-- CPU monitoring is now available.
-- Change update log style.
+- Delete about SMC plugin from Issues on README.
 
 <details><summary>Older updates</summary><div>
+
+## 75af69f0 - Enable SMCProcessor.kext and SMCSuperIO.kext
+  - Enable SMCProcessor.kext
+  - Enable SMCSuperIO.kext
+  - CPU monitoring is now available.
+  - Change update log style.
 
 ## 9f82e947 - Initial commit. OpenCore 0.9.7 DEBUG
   - First boot with macOS 14.1.2 .
