@@ -1,6 +1,12 @@
 # About
 This repository keep and maintenance my Opencore EFI for ASRock Z690M PG Riptide/D5.
 
+*Important note:*\
+Because of issues with `WhateverGreen.kext` in macOS 26, you need to temporarily disable it during macOS installation or OTA updates from older versions.\
+Purple line artifacts may appear on the screen during the installation or update process.\
+Once the installation or update is complete, re-enable `WhateverGreen.kext`. The artifacts should disappear.\
+For more details, see [this guide](https://dortania.github.io/OpenCore-Install-Guide/extras/tahoe.html#whatevergreen).
+
 # Hardware
 <table>
   <tr><td>Motherboard</td><td>ASRock Z690M PG Riptide/D5</td></tr>
@@ -176,12 +182,16 @@ See what deleted from [here](https://github.com/chibibaku/Opencore-ASRock-Z690M-
 
 # Update log
 ## Last update
+ - Add Notice about WhateverGreen.kext issue with macOS 26.
+
+<details><summary>Older updates</summary><div>
+
+## 3434bb8 - OpenCore and kexts update
  - OpenCore is now 1.0.6 DEBUG.
  - Kexts are updated to latest versions.
  - Edit config.plist.
  - Add kext section in README.
 
-<details><summary>Older updates</summary><div>
 
 ## fa333bb - README edits
   - Delete about SMC plugin from Issues on README.
