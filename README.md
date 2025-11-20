@@ -3,19 +3,34 @@ This repository keep and maintenance my Opencore EFI for ASRock Z690M PG Riptide
 
 # Hardware
 <table>
-       <tr><td>Motherboard</td><td>ASRock Z690M PG Riptide/D5</td></tr>
-       <tr><td>CPU</td><td>Intel Core i9 12900KF</td></tr>
-       <tr><td>Memory</td><td>Samsung DDR5-4800 32GB x2<br>(M323R4GA3BB0-CQK)</tb></tr>
-       <tr><td>dGPU</td><td>AMD Radeon RX 560<br>(ASUS DUAL-RX560-4G)</td></tr>
-       <tr><td>Sound</td></td><td>Realtek ALC897</td></tr>
-       <tr><td>Ethernet</td><td>Intel Killer E3100G</td></tr>
-       <tr><td>Wifi + BT</td><td>N/A (wired connection)</td></tr>
+  <tr><td>Motherboard</td><td>ASRock Z690M PG Riptide/D5</td></tr>
+  <tr><td>CPU</td><td>Intel Core i9 12900KF</td></tr>
+  <tr><td>Memory</td><td>Samsung DDR5-4800 32GB x2<br>(M323R4GA3BB0-CQK)</tb></tr>
+  <tr><td>dGPU</td><td>AMD Radeon RX 560<br>(ASUS DUAL-RX560-4G)</td></tr>
+  <tr><td>Sound</td></td><td>Realtek ALC897</td></tr>
+  <tr><td>Ethernet</td><td>Intel Killer E3100G<br>(internally, RTL8125)</td></tr>
+  <tr><td>Wifi + BT</td><td>N/A (wired connection)</td></tr>
+</table>
+
+# Kexts
+<table>
+  <tr><td>Lilu.kext</td><td>1.7.1</td></tr>
+  <tr><td>VirtualSMC.kext</td><td>1.3.7</td></tr>
+  <tr><td>WhateverGreen.kext</td><td>1.7.0</td></tr>
+  <tr><td>RestrictEvents.kext</td><td>1.1.6</td></tr>
+  <tr><td>SMCProcessor.kext</td><td>1.3.7</td></tr>
+  <tr><td>SMCRadeonSensors.kext</td><td>2.4.0</td></tr>
+  <tr><td>SMCSuperIO.kext</td><td>1.3.7</td></tr>
+  <tr><td>AppleALC.kext</td><td>1.9.6</td></tr>
+  <tr><td>NVMeFix.kext</td><td>1.1.3</td></tr>
+  <tr><td>LucyRTL8125Ethernet.kext</td><td>1.2.2</td></tr>
+  <tr><td>AMFIPass.kext</td><td>1.4.1</td></tr>
 </table>
 
 # What working / Not working
-## TL;DR
-- Opencore 0.9.7 DEBUG
-- macOS Sonoma 14.1.2
+## Work:
+- Opencore 1.0.6 DEBUG
+- macOS Tahoe 26.1
 - GPU acceleration
 - Ethernet
 - PCIe / Memory-Slot
@@ -90,12 +105,12 @@ See what deleted from [here](https://github.com/chibibaku/Opencore-ASRock-Z690M-
 
 #### CPU
 
-* [ ] CPU Power Management [Optimizing Power Management](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#optimizing-power-management)
+* [x] CPU Power Management [Optimizing Power Management](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#optimizing-power-management)
 * [x] Temperatures and stability with 100% CPU
 
 #### Disk
 
-* [ ] NVMe SSD (PCIe Gen3 or Gen4 speeds)
+* [x] NVMe SSD (PCIe Gen3 or Gen4 speeds)
 * [ ] SATA SSD
 * [ ] TRIM support
 
@@ -115,7 +130,7 @@ See what deleted from [here](https://github.com/chibibaku/Opencore-ASRock-Z690M-
 
 * [x] USB 2 ports
 * [x] USB 2 on USB 3 ports
-* [ ] USB 3 and 3.1 ports (check transfer speed during copy)
+* [x] USB 3 and 3.1 ports (check transfer speed during copy)
 * [ ] USB Type-C ports
 <!-- * [ ] SD Card Reader -->
 <!-- * [ ] Camera (Photo Booth, Facetime, Zoom) -->
@@ -144,8 +159,8 @@ See what deleted from [here](https://github.com/chibibaku/Opencore-ASRock-Z690M-
 
 #### OS Features
 
-* [ ] iMessage, FaceTime, App Store, iTunes Store
-* [ ] DRM support
+* [x] iMessage, FaceTime, App Store, iTunes Store
+* [x] DRM support
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/) __ I make this checklist available under public domain [(CC0)](https://creativecommons.org/share-your-work/public-domain/cc0/)
 </div></details>
@@ -161,9 +176,15 @@ See what deleted from [here](https://github.com/chibibaku/Opencore-ASRock-Z690M-
 
 # Update log
 ## Last update
-- Delete about SMC plugin from Issues on README.
+ - OpenCore is now 1.0.6 DEBUG.
+ - Kexts are updated to latest versions.
+ - Edit config.plist.
+ - Add kext section in README.
 
 <details><summary>Older updates</summary><div>
+
+## fa333bb - README edits
+  - Delete about SMC plugin from Issues on README.
 
 ## 75af69f0 - Enable SMCProcessor.kext and SMCSuperIO.kext
   - Enable SMCProcessor.kext
